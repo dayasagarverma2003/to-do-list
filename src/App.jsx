@@ -58,7 +58,7 @@ function App() {
     const clearCompleted = useCallback(() => {
         setTodos(prev => prev.filter(t => !t.completed))
     }, [])
-
+//button to toggle all todos as completed or active
     const toggleAll = useCallback(() => {
         const allDone = todos.every(t => t.completed)
         setTodos(prev => prev.map(t => ({ ...t, completed: !allDone })))
